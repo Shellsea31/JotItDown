@@ -22,12 +22,12 @@ router.get("/api/notes", (req,res) =>{
 
 // GET: notes.html
 router.get("/notes", (req, res) => {
-  res.json(notes)
+  res.send(notes)
 });
 
 // GET: index.html
 router.get("/*", (req, res) => {
-  res.json(index)
+  res.send(index)
 });
 
 

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = 2020;
-const apiRoutes = require("./db/routes/api-routes")
+const apiRoutes = require("./routes/api-routes")
 
 // parse received url as a string and use it to grab data
 app.use(express.urlencoded({extended: true}));
