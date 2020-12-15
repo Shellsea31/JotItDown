@@ -12,12 +12,18 @@ router.get("/", (req, res) => {
   });
 });
 
-// GET: saved notes "String"
+// GET: saved notes as object notation
 router.get("/api/notes", (req,res) =>{
   fs.readFile("./db/db.json", "utf8", (err, data) =>{
     if (err) throw err;
-    res.send(JSON.parse(data))
+    res.json(JSON.parse(data))
   })
+})
+
+// POST: new note
+router.post("/api/notes", (req,res) =>{
+  console.log(req.body)
+  res.send({msg: "success"})
 })
 
 // GET: notes.html
@@ -29,6 +35,9 @@ router.get("/notes", (req, res) => {
 router.get("/*", (req, res) => {
   res.send(index)
 });
+
+
+
 
 
 module.exports = router;
