@@ -4,6 +4,8 @@ const router = require("express").Router();
 const fs = require("fs");
 const index = fs.readFileSync("./public/index.html", "utf8");
 const notes = fs.readFileSync("./public/notes.html", "utf8");
+const { nanoid } = require("nanoid");
+let id = nanoid(7);
 
 // testing connection
 router.get("/", (req, res) => {
@@ -24,15 +26,21 @@ router.get("/api/notes", (req, res) => {
 router.post("/api/notes", (req, res) => {
   fs.readFile("./db/db.json", "utf8", (err, data) => {
     if (err) throw err;
-    const notes = JSON.parse(data)
+    const notes = JSON.parse(data);
 
     notes.push({
       title: req.body.title,
       text: req.body.text,
-    })
-    res.send({msg: "success"});
+      noteId: id,
+    });
+
+    console.log(notes);
+
+    fs.writeFile("./db/db.json", JSON.stringify(notes), (err) => {
+      if (err) return res.send("failed to add");
+      return res.json({ msg: "success" });
+    });
   });
-  console.log(notes)
 });
 
 // GET: notes.html
