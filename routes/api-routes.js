@@ -1,4 +1,4 @@
-// localhost:2020/api  <==== is the base
+// localhost:2020/ <==== is the base
 
 const router = require("express").Router();
 const fs = require("fs");
@@ -7,12 +7,6 @@ const notes = fs.readFileSync("./public/notes.html", "utf8");
 const { nanoid } = require("nanoid");
 let id = nanoid(7);
 
-// testing connection
-router.get("/", (req, res) => {
-  res.json({
-    msg: "success",
-  });
-});
 
 // GET: saved notes as object notation
 router.get("/api/notes", (req, res) => {
@@ -22,7 +16,7 @@ router.get("/api/notes", (req, res) => {
   });
 });
 
-// POST: new note
+// POST: new note to db.json
 router.post("/api/notes", (req, res) => {
   fs.readFile("./db/db.json", "utf8", (err, data) => {
     if (err) throw err;
