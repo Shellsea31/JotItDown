@@ -19,8 +19,11 @@ Then I created routes to:
 ![localhost_2020_notes](https://user-images.githubusercontent.com/70654835/102424180-79d15f00-3fbf-11eb-96bb-453c992f63fb.png)
 ![localhost_2020_notes (1)](https://user-images.githubusercontent.com/70654835/102424201-85248a80-3fbf-11eb-9401-0e47cd573f41.png)
 
+### View the landing page [here](https://shellsea31.github.io/JotItDown/)
+**NOTE:** the application will not be functional until you follow the steps in the installation guide of this README.
 
 ## Installation
+
 
 ## Contributors
 
