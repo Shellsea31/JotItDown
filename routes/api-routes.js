@@ -19,7 +19,7 @@ router.post("/api/notes", (req, res) => {
     if (err) throw err;
     const notes = JSON.parse(data);
 
-    note.push({
+    notes.push({
       title: req.body.title,
       text: req.body.text,
       id: id,
