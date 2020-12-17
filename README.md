@@ -25,5 +25,13 @@ Then I created routes to:
 ## Installation
 
 
+
+
 ## Contributors
+
+ **Shelsy Barrera**
+ * Github: Shellsea31
+ * Gitlab: @Shellsea
+ * LinkedIn: Shelsy Barrera
+ * Email: elainesbarrera@gmail.com
 
