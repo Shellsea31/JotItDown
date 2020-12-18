@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 2020;
+const PORT = process.env.PORT || 2020;
 const apiRoutes = require("./routes/api-routes");
 
 app.use(express.urlencoded({ extended: true }));
