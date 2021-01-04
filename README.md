@@ -22,10 +22,6 @@ Then I created routes to:
 ### View the landing page [here](https://shellsea31.github.io/JotItDown/)
 **NOTE:** the application will not be functional until you follow the steps in the installation guide of this README.
 
-## Installation
-
-
-
 
 ## Contributors
 
